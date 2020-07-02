@@ -13,6 +13,7 @@
         ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']
 
         ########
+        
 
         2. Напишите функцию подсчета градусов Фаренгейта при входящем параметре температуры в цельсиях.
         Алгоритм пересчета из градусов Цельсия в градусы Фаренгейта - это температура в градусах Цельсия, умноженная на 9/5 плюс 32.         
@@ -33,8 +34,53 @@
      <script>
 //         4. Напишите функцию которая возвращает длину самого длинного слова в предложении. 
 // Ваш ответ должен быть числом.
-//         "The quick brown fox jumped over the lazy dog"
+function maxLength (str){
+    var str = "The quick brown fox jumped over the lazy dog";
+    var arr = str.split(" ");
+   // console.log(arr);
+    var max = 0;
+        for (var i = 0; i < arr.length; i++)
+         {
+            if (arr[i].length > max) {
+                 max = arr[i].length;
+    } 
+}
+        return max;
+       
+}
+        var str = "The quick brown fox jumped over the lazy dog";   
+        var test = maxLength(str);
+        console.log(test);
+     maxLength();
 
+//         "The quick brown fox jumped over the lazy dog"
+//1. Напишите функцию, которая принимает массив в качестве аргумента. Используя slice (), извлеките информацию из массива аргументов и верните новый массив, содержащий элементы «warm» и «sunny».
+function test() {
+      var arr = ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms'];
+      var testTest = arr.slice(2, -2);
+      console.log(testTest);
+}  
+    test();
+   /* 2. Напишите функцию подсчета градусов Фаренгейта при входящем параметре температуры в цельсиях.
+        Алгоритм пересчета из градусов Цельсия в градусы Фаренгейта - это температура в градусах Цельсия, умноженная на 9/5 плюс 32.    
+*/function faren(x){
+    return x * 9 / 5 + 32;
+}
+   var result = faren(4);
+   console.log(result);
+  /* 3. Напишите функцию которая бы переворачивала предоставленную строку
+  Возможно, вам придется превратить строку в массив, прежде чем вы можете обратить его. 
+        Ваш результат должен быть строкой.
+        "something" 
+    */function rev (str){
+        var str = "something";
+        str = str.split(" ");
+        str = str.reverse();
+        str = str.reverse();
+        str = str.join();
+        document.write(str);
+    }
+        rev();
     </script>
 </body>
 </html>
