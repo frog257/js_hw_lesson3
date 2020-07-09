@@ -1,0 +1,201 @@
+﻿<!-- 
+    1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий, в каком квадранте в декартовой системе координат находится данная точка. Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+    
+    2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
+       Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+       В зависимости от принятого знака операции, вызвать соответствующий метод.
+
+    3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+       содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+    
+    4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 3000;
+           • "manager" — 1500;
+           • "programmer" — 2000;
+           • для остальных значений — 1000.
+       После выполнения функции — вывести информацию о сотрудниках.
+           
+    5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках.
+
+     -->
+     <!DOCTYPE html>
+     <html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+      <title></title>
+        <script>
+       /*  2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
+       Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+       В зависимости от принятого знака операции, вызвать соответствующий метод.
+       *//*
+             var a = +prompt('vvedite chislo');
+             var action = prompt('vvedite znak operaciy');
+             var b = +prompt('vvedite chislo');
+          
+
+             var math = {
+                 sum: function(a,b) {
+                     console.log(a + b)      
+                     },
+                 mult: function(a,b) {
+                     console.log(a * b)  
+                     },
+                 sub: function(a,b) {
+                     console.log(a - b)      
+                 },
+                 div: function(a,b) {
+                     console.log(a / b)      
+                 }
+                }
+                
+
+             switch (action) {
+                case '+':
+                     math.sum(a, b);                                        
+                case '*':
+                     math.mult(a, b);                    
+                case '-':
+                     math.sub(a, b);
+                case '/':
+                     math.div(a, b);
+                
+             }
+            /* 1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий, в каком квадранте в декартовой системе координат находится данная точка. Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+*/         /*   var x = +prompt('vvedite chislo');
+              var y = +prompt('vvedite chislo');
+          
+             var point = {
+                 x: function(){
+                   
+                 },
+                 y: function(){
+                    
+                   }  ,
+                 getQuadrant: function() {
+                     if (x > 0 && y > 0) {
+                         console.log('Первый квадрант');
+                    } else if  (x < 0 && y > 0) {
+                       console.log('Второй  квадрант');
+                    } else if  (x < 0 && y < 0) {
+                        console.log('Третий квадрант');
+                    } else   {
+                        console.log('Четвертый квадрант');
+                     }
+
+                }
+             
+            }  
+
+             point.getQuadrant(x,y);
+            
+             */ 
+           /*  3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+       содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+            */
+            var people = [
+                {
+                     name: 'BBBB',
+                     sName: 'TestTest',
+                     occupation: 'director'
+                     show: function()
+                 },
+                 {
+                     name: 'AAAAA',
+                     sName: 'TestTest2',
+                     occupation: 'manager'
+                 },                {
+                     name: 'CCCC',
+                     sName: 'TestTest3',
+                     occupation: 'programmer'
+                 }
+             ]
+             console.log(people);
+             alert('asd');
+             /* 4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 3000;
+           • "manager" — 1500;
+           • "programmer" — 2000;
+           • для остальных значений — 1000.
+       После выполнения функции — вывести информацию о сотрудниках.
+       */
+             
+
+             function addSalary(arr) {
+                 for (var i = 0; i < arr.length; i++) {
+                     switch(arr[i].occupation) {
+                         case 'director':
+                             arr[i].salary = 3000
+                             break;
+                         case 'manager':
+                             arr[i].salary = 1500
+                             break;
+                         case 'programmer':
+                             arr[i].salary = 2000
+                             break;
+                         default:
+                             alert('no such person')
+                     }
+                 }
+
+                 console.log(arr);
+             }
+
+             addSalary(people);
+             /* 5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках.
+*/
+
+             function sortPeople(param) {
+                 if (param === 'salary') {
+                     people.sort( function(a,b) {
+                         return a - b
+                     })
+                 } else {
+                     people.sort( function(a,b) {
+                         var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+                         var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+                         if (nameA < nameB) {
+                             return -1;
+                         }
+                         if (nameA > nameB) {
+                             return 1;
+                         }
+
+                         // names must be equal
+                         return 0;
+                     }
+                 }
+
+
+
+
+                 console.log(people);
+             }
+
+             sortPeople('name');
+
+            function fibonacci(num) {
+  if (num <= 1) return 1;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+
+console.log(fibonacci(5));
+
+
+
+
+            
+        </script>
+    </head>
+    <body>
+    </body>
+    </html>
