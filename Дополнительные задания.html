@@ -7,7 +7,7 @@
 
     3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
        содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
-       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+       -. По окончанию заполнения — вывести информацию о сотрудниках.
     
     4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
        будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
@@ -101,21 +101,25 @@
                 {
                      name: 'BBBB',
                      sName: 'TestTest',
-                     occupation: 'director'
-                     show: function()
+                     occupation: 'director',
+                     
                  },
                  {
                      name: 'AAAAA',
                      sName: 'TestTest2',
-                     occupation: 'manager'
-                 },                {
+                     occupation: 'manager',
+                    
+                 },  
+                {               
                      name: 'CCCC',
                      sName: 'TestTest3',
-                     occupation: 'programmer'
+                     occupation: 'programmer',
+                    
                  }
-             ]
-             console.log(people);
-             alert('asd');
+                ]
+                             
+                    console.log(people);
+             //alert('asd');
              /* 4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
        будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
        Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
@@ -155,11 +159,12 @@
 
              function sortPeople(param) {
                  if (param === 'salary') {
-                     people.sort( function(a,b) {
+                     people.sort(function(a,b)) 
                          return a - b
-                     })
-                 } else {
-                     people.sort( function(a,b) {
+                 
+                  
+             }else{
+                     people.sort (function(a,b)) {
                          var nameA = a.name.toUpperCase(); // ignore upper and lowercase
                          var nameB = b.name.toUpperCase(); // ignore upper and lowercase
                          if (nameA < nameB) {
@@ -172,22 +177,22 @@
                          // names must be equal
                          return 0;
                      }
-                 }
-
-
-
+                    }
+            
+            
+                }
 
                  console.log(people);
-             }
+             
 
              sortPeople('name');
 
             function fibonacci(num) {
-  if (num <= 1) return 1;
+  if (num <= 1) return 1{
 
   return fibonacci(num - 1) + fibonacci(num - 2);
 }
-
+            }
 console.log(fibonacci(5));
 
 
